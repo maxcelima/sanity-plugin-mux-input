@@ -1,0 +1,30 @@
+@import "part:@sanity/base/theme/variables-style";
+
+.root {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  min-height: 160px;
+}
+
+.videoContainer {
+  position: relative;
+  min-height: 150px;
+}
+
+.videoError {
+  position: relative;
+  padding: var(--medium-padding);
+}
+
+.progressBar {
+  position: relative;
+  margin-top: var(--large-padding);
+  margin-bottom: 2.5em;
+  padding: var(--medium-padding);
+}
+
+.uploadCancelButton {
+  text-align: center;
+}
+
