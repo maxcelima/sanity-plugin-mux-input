@@ -31,7 +31,8 @@ export function uploadUrl(url, options = {}) {
             const {privacies} = options
             const muxBody = {
               input: validUrl,
-              playback_policy: privacies || ['public']
+              playback_policy: privacies || ['public'],
+              mp4_support: 'standard'
             }
             const query = {
               muxBody: JSON.stringify(muxBody),
@@ -100,7 +101,7 @@ export function uploadFile(file) {
                       }
                       return from(updateAssetDocumentFromUpload(uuid)).pipe(
                         // eslint-disable-next-line max-nested-callbacks
-                        mergeMap(doc => of({...event, asset: doc}))
+                        mergeMap(doc => of({ ...event, asset: doc }))
                       )
                     }),
                     // eslint-disable-next-line max-nested-callbacks
